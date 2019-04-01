@@ -59,7 +59,7 @@
           skuName:
             value: "Standard"
           secretsObject:
-            value: {}
+            value: '{}'
 
   - name: Create Storage Account with Blob Encrypted
     azure_rm_deployment:
