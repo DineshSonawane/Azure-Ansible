@@ -289,40 +289,6 @@
       }
     },
     {
-      "apiVersion": "2015-04-01",
-      "name": "[concat('LongHttpQueue ', variables('hostingPlanName'))]",
-      "type": "Microsoft.Insights/alertrules",
-      "location": "[parameters('location')]",
-      "dependsOn": [
-        "[variables('hostingPlanName')]"
-      ],
-      "tags": {
-        "[concat('hidden-link:', resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName')))]": "Resource",
-        "displayName": "AutoScaleSettings"
-      },
-      "properties": {
-        "name": "[concat('LongHttpQueue ', variables('hostingPlanName'))]",
-        "description": "[concat('The HTTP queue for the instances of ', variables('hostingPlanName'), ' has a large number of pending requests.')]",
-        "isEnabled": false,
-        "condition": {
-          "odata.type": "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
-          "dataSource": {
-            "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
-            "resourceUri": "[concat(resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', variables('hostingPlanName'))]",
-            "metricName": "HttpQueueLength"
-          },
-          "operator": "GreaterThan",
-          "threshold": 100.0,
-          "windowSize": "PT5M"
-        },
-        "action": {
-          "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleEmailAction",
-          "sendToServiceOwners": true,
-          "customEmails": []
-        }
-      }
-    },
-    {
       "apiVersion": "2015-05-01",
       "name": "[concat('AppInsights', variables('webSiteName'))]",
       "type": "Microsoft.Insights/components",
