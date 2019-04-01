@@ -5,7 +5,7 @@
   gather_facts: False
   vars:
     # Variables 'resgrp' and 'location' need to be provided at command line with arg --extra-vars
-    templateLinkWebAppSQLDB: 'https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/201-web-app-sql-database/azuredeploy.json'
+    templateLinkWebAppSQLDB: 'https://raw.githubusercontent.com/mukeshf/Azure-Ansible/master/WebAppwithSQLDBPaaS.json'
     templateLinkWebAppKeyVault: 'https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/201-key-vault-secret-create/azuredeploy.json'
     templateLinkWebAppStorageAccount: 'https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/201-storage-account-service-encryption-create/azuredeploy.json' 
     #paramsLink: 'https://raw.githubusercontent.com/nitinpokharna/ansible-azure-lab/master/azuredeploy.parameters.json'
