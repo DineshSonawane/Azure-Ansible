@@ -59,7 +59,16 @@
           skuName:
             value: "Standard"
           secretsObject:
-            value: {}
+            value: {"secrets": [
+          {
+            "secretName": "exampleSecret1",
+            "secretValue": "secretVaule1"
+          },
+          {
+            "secretName": "exampleSecret2",
+            "secretValue": "secretValue2"
+          }
+        ]}
 
   - name: Create Storage Account with Blob Encrypted
     azure_rm_deployment:
