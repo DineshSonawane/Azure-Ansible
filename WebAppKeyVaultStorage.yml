@@ -53,9 +53,9 @@
           objectId:
             value: "cc8228dc-8a36-4e14-87fd-648f62f2618b"
           keysPermissions:
-            value: '["list"]'
+            value: "['list']"
           secretsPermissions:
-            value: '["list"]'
+            value: "['list']"
           skuName:
             value: "Standard"
           secretsObject:
