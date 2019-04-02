@@ -3,6 +3,7 @@
   hosts: localhost
   connection: local
   gather_facts: False
+  become: yes
   vars:
     # Variables 'resgrp' and 'location' need to be provided at command line with arg --extra-vars
     templateLinkWebAppSQLDB: 'https://raw.githubusercontent.com/mukeshf/Azure-Ansible/master/WebAppwithSQLDBPaaS.json'
