@@ -86,3 +86,11 @@
           Location:
             value: "Southeast Asia"
 
+  - name: Create SPN for WebApp and assign role
+    inputs:
+        scriptlocation: inlinescript
+        inlinescript: |
+            az ad sp create-for-rbac -n "webSitezxgx45cl5jj6g"
+            az ad sp create-for-rbac --role owner
+            az ad sp create-for-rbac -s 449ea803-4473-4be7-85e6-21c888bda95f
+
