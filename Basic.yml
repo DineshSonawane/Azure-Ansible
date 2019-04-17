@@ -4,11 +4,10 @@
     #vars:
     connection: local
     any_errors_fatal: True
-    tasks:
-      list: 
-        - List1
-        - List2
-        - List3
+    list: 
+      - List1
+      - List2
+      - List3
     #dictionary:
       #  key1: Value1
       #  key2: Value2
