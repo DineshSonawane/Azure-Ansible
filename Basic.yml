@@ -4,13 +4,12 @@
     #vars:
     connection: local
     any_errors_fatal: True
-    plain_list:
-      - Category1
-      - Category2
-      - Category3
-      - Category4
+    list: 
+      - List1
+      - List2
+      - List3
     #dictionary:
-    #  key1: Value1
-    #  key2: Value2
-    #  key3: Value3
+      #  key1: Value1
+      #  key2: Value2
+      #  key3: Value3
 ...
