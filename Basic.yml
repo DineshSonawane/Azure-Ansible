@@ -1,5 +1,6 @@
 ---
-  - hosts: localhost
+  - name: Basic
+    hosts: localhost
   #  gather_facts: True  
     #vars:
   #  connection: local
