@@ -4,9 +4,6 @@
     connection: local
     any_errors_fatal: true
 
-    #vars:
-      
-
     tasks:
     - name: "Define list of Months"
       debug:
@@ -25,15 +22,12 @@
         - November
         - December
 
-    - name: "Handle failed tasks and skip it"
+    - name: "Handle error by skipping it and register into variable"
       shell: 1+2
       ignore_errors: yes
       register: failedOutput
-      #debug:
-      #  var: failedOutput
 
-    - name: "Register variable and print values"
-      #shell: echo "Hello! Welcome to Ansible"
-      #register: testvar
+    - name: "Print value of Registered variable"
       debug:
         var: failedOutput
+        msg: failedOutput
