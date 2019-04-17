@@ -1,0 +1,14 @@
+---
+  - hosts: localhost
+    gather_facts: yes
+    connection: local
+    any_errors_fatal: true
+
+    tasks:
+    - name: "loop through list"
+      debug:
+        msg: "An item: {{item}}"
+      with_items:
+        - 1
+        - 2
+        - 3
