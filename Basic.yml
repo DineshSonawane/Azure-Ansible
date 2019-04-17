@@ -4,18 +4,13 @@
     #vars:
     connection: local
     any_errors_fatal: True
-    foods:
-      - Apple
-      - Orange
-      - Strawberry
-      - Mango
-    languages:
-      perl: Elite
-      python: Elite
-      pascal: Lame
-    education: |
-      4 GCSEs
-      3 A-Levels
-      BSc in the Internet of Things
-
+    plain_list:
+      - Category1
+      - Category2
+      - Category3
+      - Category4
+    #dictionary:
+    #  key1: Value1
+    #  key2: Value2
+    #  key3: Value3
 ...
