@@ -1,16 +1,16 @@
 ---
-  - name: Basic
-    hosts: localhost
-  #  gather_facts: True  
-    #vars:
-  #  connection: local
-  #  any_errors_fatal: True
-    xyz: 
-      - List1
-      - List2
-      - List3
-    #dictionary:
-      #  key1: Value1
-      #  key2: Value2
-      #  key3: Value3
+- name: Basic
+  hosts: localhost
+#  gather_facts: True  
+  #vars:
+#  connection: local
+#  any_errors_fatal: True
+  xyz: 
+    - List1
+    - List2
+    - List3
+  #dictionary:
+    #  key1: Value1
+    #  key2: Value2
+    #  key3: Value3
 ...
