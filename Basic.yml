@@ -29,5 +29,4 @@
 
     - name: "Print value of Registered variable"
       debug:
-        #var: failedOutput
-        msg: failedOutput
+        var: failedOutput
