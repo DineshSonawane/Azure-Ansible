@@ -5,7 +5,7 @@
     #vars:
   #  connection: local
   #  any_errors_fatal: True
-    list: 
+    xyz: 
       - List1
       - List2
       - List3
