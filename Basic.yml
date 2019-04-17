@@ -1,5 +1,6 @@
 ---
 - name: Martin D'vloper
+  hosts: localhost
   job: Developer
   skill: Elite
   employed: True
