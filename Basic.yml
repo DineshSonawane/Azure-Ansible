@@ -1,18 +1,39 @@
 ---
-  - name: Basic
-    hosts: localhost
-    gather_facts: True  
-    #vars:
+  - hosts: localhost
+    gather_facts: yes
     connection: local
-    any_errors_fatal: True
+    any_errors_fatal: true
+
+    #vars:
+      
 
     tasks:
-    - name: Create list
-      List: 
-        - List1
-        - List2
-        - List3
-    #dictionary:
-      #  key1: Value1
-      #  key2: Value2
-      #  key3: Value3
+    - name: "Define list of Months"
+      debug:
+        msg: "The Month is: {{item}}"
+      with_items:
+        - January
+        - February
+        - March
+        - April
+        - May
+        - June
+        - July
+        - August
+        - September
+        - October
+        - November
+        - December
+
+    - name: "Register variable and print values"
+      shell: echo "Hello! Welcome to Ansible"
+      register: testvar
+      debug:
+        var: testvar
+
+    - name: "Handle failed tasks and skip it"
+      shell: 1+2
+      ignore_errors: yes
+      register: failedOutput
+      debug:
+        var: failedOutput
