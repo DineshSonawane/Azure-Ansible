@@ -1,9 +1,18 @@
 ---
-  - name: "loop through list"
+  - name: Basic
     hosts: localhost
-    debug:
-      msg: "An item: {{item}}"
-    with_items:
-      - 1
-      - 2
-      - 3
+    gather_facts: True  
+    #vars:
+    connection: local
+    any_errors_fatal: True
+
+    tasks:
+    - name: Create list
+      List: 
+        - List1
+        - List2
+        - List3
+    #dictionary:
+      #  key1: Value1
+      #  key2: Value2
+      #  key3: Value3
