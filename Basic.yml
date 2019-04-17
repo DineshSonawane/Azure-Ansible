@@ -25,15 +25,15 @@
         - November
         - December
 
-    - name: "Register variable and print values"
-      shell: echo "Hello! Welcome to Ansible"
-      register: testvar
-      debug:
-        var: testvar
-
     - name: "Handle failed tasks and skip it"
       shell: 1+2
       ignore_errors: yes
       register: failedOutput
+      #debug:
+      #  var: failedOutput
+
+    - name: "Register variable and print values"
+      #shell: echo "Hello! Welcome to Ansible"
+      #register: testvar
       debug:
         var: failedOutput
