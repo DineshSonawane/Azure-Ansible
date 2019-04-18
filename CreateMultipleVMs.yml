@@ -1,0 +1,32 @@
+---
+- name: CREATE ARM Deployment PLAYBOOK
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  vars:
+    # Variables 'resgrp' and 'location' need to be provided at command line with arg --extra-vars
+    templateLink: 'https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/201-vm-copy-index-loops/azuredeploy.json'
+    #paramsLink: 'https://raw.githubusercontent.com/nitinpokharna/ansible-azure-lab/master/azuredeploy.parameters.json'
+    # No parameters required for this template
+    #paramsLink: ''
+   
+  tasks:
+  - name: Deploy ARM template
+    azure_rm_deployment:
+        state: present
+        resource_group_name: 'RG_TestVM'
+        # location seems to be not optional
+        location: 'Southeast Asia'
+        template_link: '{{ templateLink }}'
+        #parameters_link: '{{ paramsLink }}'
+        parameters:
+          adminUsername:
+              value: "testadmin"
+          adminPassword:
+              value: "Pass@1234567"
+          numberOfInstances:
+              value: "3"
+          location:
+              value: "southeastasia"
+          OS:
+              value: "Windows"
