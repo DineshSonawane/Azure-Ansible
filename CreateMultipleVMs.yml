@@ -5,7 +5,7 @@
   gather_facts: False
   vars:
     # Variables 'resgrp' and 'location' need to be provided at command line with arg --extra-vars
-    templateLink: 'https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/201-vm-copy-index-loops/azuredeploy.json'
+    templateLink: 'https://dgstoragewy6psz5nn6eam.blob.core.windows.net/armtemplates/CreateMultipleVMs.json'
     #paramsLink: 'https://raw.githubusercontent.com/nitinpokharna/ansible-azure-lab/master/azuredeploy.parameters.json'
     # No parameters required for this template
     #paramsLink: ''
