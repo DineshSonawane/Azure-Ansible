@@ -1,0 +1,40 @@
+---
+- name: CREATE ARM Deployment PLAYBOOK
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  vars:
+    # Variables 'resgrp' and 'location' need to be provided at command line with arg --extra-vars
+    templateLink: 'https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/dsc-extension-iis-server-windows-vm/azuredeploy.json'
+    #paramsLink: 'https://raw.githubusercontent.com/nitinpokharna/ansible-azure-lab/master/azuredeploy.parameters.json'
+    # No parameters required for this template
+    #paramsLink: ''
+   
+  tasks:
+  - name: Deploy ARM template
+    azure_rm_deployment:
+        state: present
+        resource_group_name: 'RG_DSC_IIS'
+        # location seems to be not optional
+        location: 'Southeast Asia'
+        template_link: '{{ templateLink }}'
+        #parameters_link: '{{ paramsLink }}'
+        parameters:
+          adminUsername:
+              value: "testadmin"
+          adminPassword:
+              value: "Pass@1234567"
+          diskType:
+              value: Standard_LRS
+          location:
+              value: "southeastasia"
+          vmName:
+              value: "MyWindowsVM"
+          vmSize:
+              value: "Standard_A1"
+          imageSKU:
+              value: "2012-R2-Datacenter"
+          modulesUrl:
+              value: "https://dgstoragewy6psz5nn6eam.blob.core.windows.net/armtemplates/ContosoWebsite.ps1.zip"
+          configurationFunction:
+              value: "ContosoWebsite.ps1\\ContosoWebsite"
