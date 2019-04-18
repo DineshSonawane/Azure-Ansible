@@ -14,7 +14,7 @@
   - name: Deploy ARM template
     azure_rm_deployment:
         state: present
-        resource_group_name: 'RG_TestVM'
+        resource_group_name: 'RG_TestVM1'
         # location seems to be not optional
         location: 'Southeast Asia'
         template_link: '{{ templateLink }}'
