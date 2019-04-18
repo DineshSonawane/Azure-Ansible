@@ -25,7 +25,7 @@
           adminPassword:
               value: "Pass@1234567"
           numberOfInstances:
-              value: "3"
+              value: 3
           location:
               value: "southeastasia"
           OS:
