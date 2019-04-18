@@ -14,18 +14,18 @@
   - name: Deploy ARM template
     azure_rm_deployment:
         state: present
-        resource_group_name: 'RG_AnsibleVM'
+        resource_group_name: 'RG_TestVM'
         # location seems to be not optional
         location: 'Southeast Asia'
         template_link: '{{ templateLink }}'
         #parameters_link: '{{ paramsLink }}'
         parameters:
           virtualMachineSize:
-              value": "Standard_A2_v2"
+              value: "Standard_A2_v2"
           adminUsername:
-              value": "testadmin"
+              value: "testadmin"
           adminPassword:
-              value": "Pass@1234567"
+              value: "Pass@1234567"
           storageAccountType:
               value: "Standard_LRS"
           location:
