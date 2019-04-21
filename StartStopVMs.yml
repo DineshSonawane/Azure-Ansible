@@ -13,11 +13,11 @@
           -u "d518c73a-09ab-4a39-953e-adf85c84e04c"
           -p "8JTfogyC8e17ChQynINmkBG7Pe+uKZKizsMJFXQOB7E="
           --tenant "ebed6f03-43f8-4b70-849d-514d19035401" && az account set --subscription "9da2f657-6c84-415a-8549-95c505c03f1b"
-          become: yes
+          become: true
 
   - name: Start VMs
     shell: |
           #az vm list -g "{{ resourcegroupname }}"
           az vm start -g "{{ resourcegroupname }}" -n " MyWindowsVM "
           az vm deallocate -g "{{ resourcegroupname }}" -n " TestVM1s "
-          become: yes
+          become: true
