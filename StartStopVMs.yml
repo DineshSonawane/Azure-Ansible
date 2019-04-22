@@ -23,7 +23,7 @@
         - "{{ vm_names_list }}"
     shell: |
           
-          az vm start -g "{{ resourcegroupname }}" -n "{{item}}"
+          #az vm start -g "{{ resourcegroupname }}" -n "{{item}}"
           #az vm start -g "{{ resourcegroupname }}" -n "{{ vm_names_list }}"
-          #az vm deallocate -g "{{ resourcegroupname }}" -n "{{ vm_names_list }}"
+          az vm deallocate -g "{{ resourcegroupname }}" -n "{{item}}"
           #become: true
