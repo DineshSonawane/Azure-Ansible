@@ -13,8 +13,8 @@
   - name: AZ Login to Azure
     shell: >
           az login --service-principal
-          -u "d518c73a-09ab-4a39-953e-adf85c84e04c"
-          -p "8JTfogyC8e17ChQynINmkBG7Pe+uKZKizsMJFXQOB7E="
+          -u "3811c341-3877-4b3d-8f6c-265d042063c4"
+          -p "upbGF8WaT94J6LZ++kQPjRpXvOOXv3pXoHHNytk0QDU="
           --tenant "ebed6f03-43f8-4b70-849d-514d19035401" && az account set --subscription "9da2f657-6c84-415a-8549-95c505c03f1b"
           #become: true
 
